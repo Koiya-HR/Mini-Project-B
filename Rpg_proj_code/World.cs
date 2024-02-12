@@ -1,3 +1,5 @@
+namespace Rpg_proj;
+
 public static class World
 {
 
