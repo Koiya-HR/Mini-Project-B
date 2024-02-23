@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Ivan\\.nuget\\packages\\": {}
+    "C:\\Users\\Yassi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ivan\\Documents\\C_sharp_programms\\Rpg_proj\\Rpg_proj\\Rpg_proj.csproj",
+      "projectUniqueName": "C:\\Users\\Yassi\\Desktop\\Mini-Project-B\\Rpg_proj_code\\Rpg_proj.csproj",
       "projectName": "Rpg_proj",
-      "projectPath": "C:\\Users\\Ivan\\Documents\\C_sharp_programms\\Rpg_proj\\Rpg_proj\\Rpg_proj.csproj",
-      "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ivan\\Documents\\C_sharp_programms\\Rpg_proj\\Rpg_proj\\obj\\",
+      "projectPath": "C:\\Users\\Yassi\\Desktop\\Mini-Project-B\\Rpg_proj_code\\Rpg_proj.csproj",
+      "packagesPath": "C:\\Users\\Yassi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Yassi\\Desktop\\Mini-Project-B\\Rpg_proj_code\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ivan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Yassi\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
