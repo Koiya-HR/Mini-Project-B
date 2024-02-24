@@ -16,4 +16,15 @@ public class Player
         MaximumHitPoints = maxhp;
         Name = name;
     }
+
+    public void Regenerate(int PotionValue)
+    {
+        CurrentHitPoints += PotionValue;
+        CurrentHitPoints = Math.Min(CurrentHitPoints, MaximumHitPoints);
+    }
+
+    public void EquipWeapon(Weapon weapon)
+    {
+        CurrentWeapon = weapon;
+    }
 }
