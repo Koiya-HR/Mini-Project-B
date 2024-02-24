@@ -4,13 +4,13 @@ public class Weapon
 {
     public int ID;
     public string Name;
-    public int Power;
+    public int MaximumDamage;
 
-    public Weapon(int id, string name, int power)
+    public Weapon(int id, string name, int maxdmg)
     {
         ID = id;
         Name = name;
-        Power = power;
+        MaximumDamage = maxdmg;
     }
 
 
