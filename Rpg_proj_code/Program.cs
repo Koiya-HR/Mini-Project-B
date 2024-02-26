@@ -11,7 +11,6 @@ public class Program
 
         while (true)
         {
-
             Console.WriteLine("What would you like to do (enter a number)?\n1: see game stats\n2: Move\n3: Fight\n4: Quit");
             switch (Console.ReadLine())
             {
@@ -65,14 +64,40 @@ public class Program
                     }
                 case "3":
                     {
-                        if (player1.CurrentLocation.MonsterLivingHere == null)
+                        Monster currentMonster = player1.CurrentLocation.MonsterLivingHere;
+                        if (currentMonster == null)
                         {
                             Console.WriteLine("there are no monsters living here");
                         }
                         else
                         {
-                            // hier battle system maken
-                            ;
+                            while (player1.CurrentHitPoints > 0 && currentMonster.CurrentHitPoints > 0)
+                            {
+                                Console.WriteLine($"you enter a fight with a {currentMonster}!\npress anything to continue");
+                                Console.ReadLine();
+                                int damageToMonster = World.RandomGenerator.Next(player1.CurrentWeapon.MaximumDamage) + player1.Level;
+                                currentMonster.CurrentHitPoints -= damageToMonster;
+                                Console.WriteLine($"You hit the {currentMonster.Name} for {damageToMonster} damage.");
+
+                                if (currentMonster.CurrentHitPoints <= 0)
+                                {
+                                    Console.WriteLine($"You defeated the {currentMonster.Name}");
+                                    break;
+                                }
+
+                                int damageToPlayer = World.RandomGenerator.Next(currentMonster.MaximumDamage);
+                                player1.CurrentHitPoints -= damageToPlayer;
+                                Console.WriteLine($"The {currentMonster.Name} hits you for {damageToPlayer} damage.");
+                                if (player1.CurrentHitPoints <= 0)
+                                {
+                                    Console.WriteLine($"You were defeated by the {currentMonster}");
+                                    Console.WriteLine("you respawn at home");
+                                    player1.CurrentHitPoints = player1.MaximumHitPoints;
+                                    player1.CurrentLocation = World.Locations[0];
+                                    break;
+                                }
+
+                            }
                         }
                         break;
                     }
