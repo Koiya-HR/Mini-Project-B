@@ -7,10 +7,10 @@ public class Location
     public string Description;
     public Quest QuestAvailableHere;
     public Monster MonsterLivingHere;
-    public Location LocationtoNorth;
-    public Location LocationtoEast;
-    public Location LocationtoSouth;
-    public Location LocationtoWest;
+    public Location LocationToNorth;
+    public Location LocationToEast;
+    public Location LocationToSouth;
+    public Location LocationToWest;
 
     public Location(int id, string name, string description, Quest QuestAvailable, Monster LivingMonster)
     {

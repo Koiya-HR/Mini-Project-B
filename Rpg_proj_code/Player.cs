@@ -30,8 +30,11 @@ public class Player
     public int MaximumHitPoints;
     public string Name;
     public int Level = 1;
+    public int MonstersKilled = 0;
+    public int QuestsCompleted = 0;
 
-    public List<Item> Inventory {
+    public List<Item> Inventory
+    {
         get;
         set;
     }
@@ -60,5 +63,25 @@ public class Player
     public void EquipWeapon(Weapon weapon)
     {
         CurrentWeapon = weapon;
+    }
+
+    public void Move(string direction)
+    {
+        if (direction == "N" && CurrentLocation.LocationToNorth != null)
+        {
+            CurrentLocation = CurrentLocation.LocationToNorth;
+        }
+        else if (direction == "E" && CurrentLocation.LocationToEast != null)
+        {
+            CurrentLocation = CurrentLocation.LocationToEast;
+        }
+        else if (direction == "S" && CurrentLocation.LocationToSouth != null)
+        {
+            CurrentLocation = CurrentLocation.LocationToSouth;
+        }
+        else if (direction == "W" && CurrentLocation.LocationToWest != null)
+        {
+            CurrentLocation = CurrentLocation.LocationToWest;
+        }
     }
 }

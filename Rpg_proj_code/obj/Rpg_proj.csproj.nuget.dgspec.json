@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Yassi\\Desktop\\Mini-Project-B\\Rpg_proj_code\\Rpg_proj.csproj": {}
+    "c:\\Users\\Yassi\\Desktop\\Mini-Project-B\\Rpg_proj_code\\Rpg_proj.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Yassi\\Desktop\\Mini-Project-B\\Rpg_proj_code\\Rpg_proj.csproj": {
+    "c:\\Users\\Yassi\\Desktop\\Mini-Project-B\\Rpg_proj_code\\Rpg_proj.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yassi\\Desktop\\Mini-Project-B\\Rpg_proj_code\\Rpg_proj.csproj",
+        "projectUniqueName": "c:\\Users\\Yassi\\Desktop\\Mini-Project-B\\Rpg_proj_code\\Rpg_proj.csproj",
         "projectName": "Rpg_proj",
-        "projectPath": "C:\\Users\\Yassi\\Desktop\\Mini-Project-B\\Rpg_proj_code\\Rpg_proj.csproj",
+        "projectPath": "c:\\Users\\Yassi\\Desktop\\Mini-Project-B\\Rpg_proj_code\\Rpg_proj.csproj",
         "packagesPath": "C:\\Users\\Yassi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yassi\\Desktop\\Mini-Project-B\\Rpg_proj_code\\obj\\",
+        "outputPath": "c:\\Users\\Yassi\\Desktop\\Mini-Project-B\\Rpg_proj_code\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Yassi\\AppData\\Roaming\\NuGet\\NuGet.Config"
