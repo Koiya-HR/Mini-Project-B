@@ -7,6 +7,7 @@ public class Player
     public Weapon CurrentWeapon;
     public int MaximumHitPoints;
     public string Name;
+    public int Level = 1;
 
     public Player(int currenthp, Location location, Weapon weapon, int maxhp, string name)
     {
