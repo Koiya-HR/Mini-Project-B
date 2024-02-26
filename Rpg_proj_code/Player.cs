@@ -46,21 +46,36 @@ public class Player
 
     public void Move(string direction)
     {
+
+        bool moved = false;
         if (direction == "N" && CurrentLocation.LocationToNorth != null)
         {
             CurrentLocation = CurrentLocation.LocationToNorth;
+            moved = true;
         }
         else if (direction == "E" && CurrentLocation.LocationToEast != null)
         {
             CurrentLocation = CurrentLocation.LocationToEast;
+            moved = true;
         }
         else if (direction == "S" && CurrentLocation.LocationToSouth != null)
         {
             CurrentLocation = CurrentLocation.LocationToSouth;
+            moved = true;
         }
         else if (direction == "W" && CurrentLocation.LocationToWest != null)
         {
             CurrentLocation = CurrentLocation.LocationToWest;
+            moved = true;
+        }
+
+        if (moved == true)
+        {
+            if (CurrentLocation.QuestAvailableHere != null)
+            {
+                if (CurrentLocation.QuestAvailableHere.started == false)
+                CurrentLocation.QuestAvailableHere.start_quest();
+            }
         }
     }
 }

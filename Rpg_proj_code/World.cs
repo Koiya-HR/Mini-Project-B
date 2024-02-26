@@ -99,6 +99,7 @@ public static class World
     public static void PopulateLocations()
     {
         // Create each location
+        // int id, string name, string description, Quest QuestAvailable, Monster LivingMonster
         Location home = new Location(LOCATION_ID_HOME, "Home", "Your house. You really need to clean up the place.", null, null);
 
         Location townSquare = new Location(LOCATION_ID_TOWN_SQUARE, "Town square", "You see a fountain.", null, null);

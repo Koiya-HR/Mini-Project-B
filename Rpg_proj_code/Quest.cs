@@ -22,7 +22,10 @@ public class Quest
     public void start_quest()
     {
         started = true;
+        Console.WriteLine("---- QUEST ACCEPTED ----");
         Console.WriteLine(Description);
+        Console.WriteLine("PRESS ENTER TO CONTINUE");
+        Console.ReadLine();
     }
 
     public Item finish_quest()
@@ -34,4 +37,13 @@ public class Quest
         return Reward;
 
     }
+
+    // public bool completed_2_quests()
+    // {
+    //     int count = 0;
+    //     foreach (Quest quest in World.Quests)
+    //     {
+
+    //     }
+    // }
 }
