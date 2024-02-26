@@ -11,6 +11,7 @@ public class Program
 
         while (true)
         {
+
             Console.WriteLine("What would you like to do (enter a number)?\n1: see game stats\n2: Move\n3: Fight\n4: Quit");
             switch (Console.ReadLine())
             {

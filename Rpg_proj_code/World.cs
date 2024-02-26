@@ -7,7 +7,7 @@ public static class World
     public static readonly List<Monster> Monsters = new List<Monster>();
     public static readonly List<Quest> Quests = new List<Quest>();
     public static readonly List<Location> Locations = new List<Location>();
-    public static readonly List<Item> items;
+    public static readonly List<Item> items = new();
     public static readonly Random RandomGenerator = new Random();
 
     public const int WEAPON_ID_RUSTY_SWORD = 1;
@@ -33,10 +33,12 @@ public static class World
 
     static World()
     {
+        Populate_items();
         PopulateWeapons();
         PopulateMonsters();
         PopulateQuests();
         PopulateLocations();
+
     }
 
     public static void PopulateWeapons()
@@ -213,7 +215,7 @@ public static class World
         return null;
     }
 
-    public static void Create_items()
+    public static void Populate_items()
     {
         // ID | NAME | restores_amount | desctription
 
