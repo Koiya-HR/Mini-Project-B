@@ -1,5 +1,27 @@
 ﻿namespace Rpg_proj;
 
+public class Item
+{
+    public int ID
+    {
+        get;
+        set;
+    }
+
+    public string Name
+    {
+        get;
+        set;
+    }
+
+    public Item(int id, string name)
+    {
+        ID = id;
+        Name = name;
+    }
+}
+
+
 public class Player
 {
     public int CurrentHitPoints;
@@ -9,6 +31,11 @@ public class Player
     public string Name;
     public int Level = 1;
 
+    public List<Item> Inventory {
+        get;
+        set;
+    }
+
     public Player(int currenthp, Location location, Weapon weapon, int maxhp, string name)
     {
         CurrentHitPoints = currenthp;
@@ -16,6 +43,12 @@ public class Player
         CurrentWeapon = weapon;
         MaximumHitPoints = maxhp;
         Name = name;
+        Inventory = new List<Item>();
+    }
+
+    public void AddItemToInventory(Item item)
+    {
+        Inventory.Add(item);
     }
 
     public void Regenerate(int PotionValue)
