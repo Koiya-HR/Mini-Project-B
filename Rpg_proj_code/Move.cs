@@ -35,6 +35,16 @@ public static void move(Player player1)
 
             if (input.ToUpper() == "N" || input.ToUpper() == "E" || input.ToUpper() == "W" || input.ToUpper() == "S")
             {
+                // check if current location is guard post and player has 
+                if (input.ToUpper() == "E" && player1.QuestsCompleted < 2 && player1.CurrentLocation == World.LocationByID(2))
+                {
+                    Console.WriteLine($"The guard at the bridge stops you and says:\nComplete 2 quests to pass this brige");
+                    Console.WriteLine($"Current progress: {player1.QuestsCompleted}/2");
+                    Console.WriteLine("press anything to continue");
+                    Console.ReadLine();
+                    break;
+
+                }
                 player1.Move(input.ToUpper());
                 break;
             }
