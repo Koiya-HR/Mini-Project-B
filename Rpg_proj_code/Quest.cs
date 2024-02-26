@@ -8,15 +8,20 @@ public class Quest
 
     public Item Reward;
 
+    public int monstes_left = 3;
+
+    public Location Destination;
+
     public bool started = false;
     public bool finished = false;
 
-    public Quest(int id, string name, string description, Item reward)
+    public Quest(int id, string name, string description, Item reward, Location destination)
     {
         Description = description;
         ID = id;
         Name = name;
         Reward = reward;
+        Destination = destination;
     }
 
     public void start_quest()

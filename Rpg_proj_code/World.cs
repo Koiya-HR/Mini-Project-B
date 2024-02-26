@@ -21,15 +21,15 @@ public static class World
     public const int QUEST_ID_CLEAR_FARMERS_FIELD = 2;
     public const int QUEST_ID_COLLECT_SPIDER_SILK = 3;
 
-    public const int LOCATION_ID_HOME = 1;
-    public const int LOCATION_ID_TOWN_SQUARE = 2;
-    public const int LOCATION_ID_GUARD_POST = 3;
-    public const int LOCATION_ID_ALCHEMIST_HUT = 4;
-    public const int LOCATION_ID_ALCHEMISTS_GARDEN = 5;
-    public const int LOCATION_ID_FARMHOUSE = 6;
-    public const int LOCATION_ID_FARM_FIELD = 7;
-    public const int LOCATION_ID_BRIDGE = 8;
-    public const int LOCATION_ID_SPIDER_FIELD = 9;
+    public const int LOCATION_ID_HOME = 0;
+    public const int LOCATION_ID_TOWN_SQUARE = 1;
+    public const int LOCATION_ID_GUARD_POST = 2;
+    public const int LOCATION_ID_ALCHEMIST_HUT = 3;
+    public const int LOCATION_ID_ALCHEMISTS_GARDEN = 4;
+    public const int LOCATION_ID_FARMHOUSE = 5;
+    public const int LOCATION_ID_FARM_FIELD = 6;
+    public const int LOCATION_ID_BRIDGE = 7;
+    public const int LOCATION_ID_SPIDER_FIELD = 8;
 
     static World()
     {
@@ -71,7 +71,8 @@ public static class World
                 QUEST_ID_CLEAR_ALCHEMIST_GARDEN,
                 "Clear the alchemist's garden",
                 "Kill rats in the alchemist's garden ",
-                items[0]);
+                items[0],
+                Locations[LOCATION_ID_ALCHEMISTS_GARDEN]);
 
 
 
@@ -80,7 +81,8 @@ public static class World
                 QUEST_ID_CLEAR_FARMERS_FIELD,
                 "Clear the farmer's field",
                 "Kill snakes in the farmer's field",
-                items[0]);
+                items[0],
+                Locations[LOCATION_ID_FARM_FIELD]);
 
 
         Quest clearSpidersForest =
@@ -88,7 +90,8 @@ public static class World
                         QUEST_ID_COLLECT_SPIDER_SILK,
                         "Collect spider silk",
                         "Kill spiders in the spider forest",
-                        items[1]);
+                        items[1],
+                        Locations[LOCATION_ID_SPIDER_FIELD]);
 
 
         Quests.Add(clearAlchemistGarden);
