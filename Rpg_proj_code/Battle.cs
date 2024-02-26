@@ -32,6 +32,7 @@ public static class Battle
                 // monster defeated
                 {
                     Console.WriteLine($"You defeated the {currentMonster.Name}");
+                    player1.MonstersKilled += 1;
                     // check if player has a quest to kill the monsters here
                     foreach (Quest quest in World.Quests)
                     {
