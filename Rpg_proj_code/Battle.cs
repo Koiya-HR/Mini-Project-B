@@ -14,7 +14,9 @@ public static class Battle
         else
         {
             Console.WriteLine($"you enter a fight with a {currentMonster.Name}!");
-            while (player1.CurrentHitPoints > 0 && currentMonster.CurrentHitPoints > 0)
+            // restore the monster hp to full at the start of fight
+            currentMonster.CurrentHitPoints = currentMonster.MaximumHitpoints;
+            while (true)
             {
                 Console.WriteLine("press anything to continue");
                 Console.ReadLine();
@@ -27,8 +29,30 @@ public static class Battle
                 Console.ReadLine();
 
                 if (currentMonster.CurrentHitPoints <= 0)
+                // monster defeated
                 {
                     Console.WriteLine($"You defeated the {currentMonster.Name}");
+                    // check if player has a quest to kill the monsters here
+                    foreach (Quest quest in World.Quests)
+                    {
+                        // if location is correct and quest is started and quest is not finished
+                        if ((quest.Destination == player1.CurrentLocation) && quest.started && !quest.finished)
+                        {
+                            quest.monstes_left -= 1;
+                            if (quest.monstes_left == 0)
+                            {
+                                quest.finish_quest(player1);
+                            }
+                            else
+                            {
+                                Console.WriteLine($"You need to kill {quest.monstes_left} more monster{(quest.monstes_left > 1 ? "s" : "")} to finish the quest");
+                                Console.WriteLine("press anything to continue");
+                                Console.ReadLine();
+                            }
+
+                        }
+
+                    }
                     break;
                 }
 

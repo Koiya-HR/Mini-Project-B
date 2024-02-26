@@ -29,26 +29,43 @@ public class Quest
         started = true;
         Console.WriteLine("---- QUEST ACCEPTED ----");
         Console.WriteLine(Description);
-        Console.WriteLine("PRESS ENTER TO CONTINUE");
+        Console.WriteLine("press anything to continue");
         Console.ReadLine();
     }
 
-    public Item finish_quest()
+    public void finish_quest(Player player)
     {
         // returns reward
         finished = true;
         Console.WriteLine($"{Name}: Completed!");
-        Console.WriteLine($"Obtained a {Reward}");
-        return Reward;
+        Console.WriteLine($"Obtained a {Reward.Name}");
+        Console.WriteLine("press anything to continue");
+        Console.ReadLine();
+
+        // add reward to players inventory
+
+        if (completed_2_quests())
+        {
+            Console.WriteLine("You have completed 2 Quests, you can now cross the bridge to the east");
+            Console.WriteLine("press anything to continue");
+            Console.ReadLine();
+
+            // add code to make crossing the bridge possible
+        }
+
+
+
 
     }
 
-    // public bool completed_2_quests()
-    // {
-    //     int count = 0;
-    //     foreach (Quest quest in World.Quests)
-    //     {
-
-    //     }
-    // }
+    public bool completed_2_quests()
+    {
+        int count = 0;
+        foreach (Quest quest in World.Quests)
+        {
+            if (quest.finished) { count += 1; }
+            if (count == 2) { return true; }
+        }
+        return false;
+    }
 }

@@ -41,6 +41,7 @@ public static void move(Player player1)
             else
             {
                 Console.WriteLine("Invalid direction. Please enter N, E, W, or S.");
+                break;
             }
         }
     }
