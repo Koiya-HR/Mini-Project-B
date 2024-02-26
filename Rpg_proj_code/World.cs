@@ -7,6 +7,7 @@ public static class World
     public static readonly List<Monster> Monsters = new List<Monster>();
     public static readonly List<Quest> Quests = new List<Quest>();
     public static readonly List<Location> Locations = new List<Location>();
+    public static readonly List<Item> items;
     public static readonly Random RandomGenerator = new Random();
 
     public const int WEAPON_ID_RUSTY_SWORD = 1;
@@ -68,7 +69,7 @@ public static class World
                 QUEST_ID_CLEAR_ALCHEMIST_GARDEN,
                 "Clear the alchemist's garden",
                 "Kill rats in the alchemist's garden ",
-                null);
+                items[0]);
 
 
 
@@ -77,7 +78,7 @@ public static class World
                 QUEST_ID_CLEAR_FARMERS_FIELD,
                 "Clear the farmer's field",
                 "Kill snakes in the farmer's field",
-                null);
+                items[0]);
 
 
         Quest clearSpidersForest =
@@ -85,7 +86,7 @@ public static class World
                         QUEST_ID_COLLECT_SPIDER_SILK,
                         "Collect spider silk",
                         "Kill spiders in the spider forest",
-                        null);
+                        items[1]);
 
 
         Quests.Add(clearAlchemistGarden);
@@ -210,5 +211,18 @@ public static class World
         }
 
         return null;
+    }
+
+    public static void Create_items()
+    {
+        // ID | NAME | restores_amount | desctription
+
+        // small hp pot
+        Item small_hp_pot = new(0, "small health potion", 5, "A small potion that restores 5 HP");
+        // large hp pot
+        Item large_hp_pot = new(1, "large health potion", 10, "A large potion that restores 10 HP");
+
+        items.Add(small_hp_pot);
+        items.Add(large_hp_pot);
     }
 }

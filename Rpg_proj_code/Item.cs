@@ -14,9 +14,16 @@ public class Item
         set;
     }
 
-    public Item(int id, string name)
+    public int Restores_amount;
+
+    public string Description;
+
+    public Item(int id, string name, int restores_amount, string description)
     {
         ID = id;
         Name = name;
+        Restores_amount = restores_amount;
+        Description = description;
+
     }
 }
