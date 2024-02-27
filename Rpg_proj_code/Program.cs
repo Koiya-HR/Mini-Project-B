@@ -16,7 +16,8 @@ public class Program
             {
                 case "1":
                     {
-                        Console.WriteLine($"current location: {player1.CurrentLocation.Name}\ncurrent weapon: {player1.CurrentWeapon.Name}\nmonsters killed: {player1.MonstersKilled}\nquests completed: {player1.QuestsCompleted}");
+                        Console.WriteLine($"current location: {player1.CurrentLocation.Name}\ncurrent weapon: {player1.CurrentWeapon.Name}\nmonsters killed: {player1.MonstersKilled}\nquests completed: {player1.QuestsCompleted}"
+                        +$"current gold {player1.Gold}");
                         break;
                     }
                 case "2":

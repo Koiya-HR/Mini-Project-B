@@ -24,7 +24,7 @@ public static class Battle
                 int damageToMonster = World.RandomGenerator.Next(player1.CurrentWeapon.MaximumDamage) + player1.Level;
                 currentMonster.CurrentHitPoints -= damageToMonster;
                 // if statement to make it so monster cant have negative hp
-                if (currentMonster.CurrentHitPoints < 0) {currentMonster.CurrentHitPoints = 0;}
+                if (currentMonster.CurrentHitPoints < 0) { currentMonster.CurrentHitPoints = 0; }
                 Console.WriteLine($"You hit the {currentMonster.Name} for {damageToMonster} damage. Enemy HP: ({currentMonster.CurrentHitPoints}/{currentMonster.MaximumHitpoints})");
 
                 Console.WriteLine("press anything to continue");
@@ -33,8 +33,13 @@ public static class Battle
                 if (currentMonster.CurrentHitPoints <= 0)
                 // monster defeated
                 {
-                    Console.WriteLine($"You defeated the {currentMonster.Name}");
                     player1.MonstersKilled += 1;
+                    Random rand = new();
+                    int gold_earned = rand.Next(1, 5);
+                    player1.Gold += gold_earned;
+                    Console.WriteLine($"You defeated the {currentMonster.Name}");
+                    Console.WriteLine($"You obtained: {gold_earned} gold");
+
                     // check if player has a quest to kill the monsters here
                     foreach (Quest quest in World.Quests)
                     {
