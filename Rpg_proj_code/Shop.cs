@@ -5,7 +5,7 @@ public static class Shop
     public static void shop(Player player1)
     {
 
-        Console.WriteLine($"Welcome to the shop traveller, what would you like to purchase? Currnet gold {player1.Gold}");
+        Console.WriteLine($"Welcome to the shop traveller, what would you like to purchase? Current gold {player1.Gold}");
         while (true)
         {
             Console.WriteLine("(0) exit shop");

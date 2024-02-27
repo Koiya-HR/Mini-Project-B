@@ -1,17 +1,21 @@
-﻿namespace Rpg_proj;
+﻿using System.Diagnostics.Tracing;
+
+namespace Rpg_proj;
 
 
 public class Player
 {
     public int CurrentHitPoints;
+    public int currentExperience = 98;
+    public int Level = 0;
     public Location CurrentLocation;
     public Weapon CurrentWeapon;
     public int MaximumHitPoints;
     public string Name;
-    public int Level = 1;
     public int MonstersKilled = 0;
     public int QuestsCompleted = 0;
     public int Gold = 10;
+    public int experienceThreshold = 100;
 
     public List<Item> Inventory
     {
@@ -27,6 +31,7 @@ public class Player
         MaximumHitPoints = maxhp;
         Name = name;
         Inventory = new List<Item>();
+
     }
 
     public void AddItemToInventory(Item item)
@@ -92,5 +97,24 @@ public class Player
             return true;
         }
         return false;
+    }
+
+    public void gainEXP()
+    {
+        int expToGain = World.RandomGenerator.Next(1, 10);
+        currentExperience += expToGain;
+
+        Console.WriteLine($"You've gained {expToGain} experience!");
+    }
+
+    public void checkLevelUp()
+    {
+        if (currentExperience >= experienceThreshold) {
+            Level += 1;
+            currentExperience -= experienceThreshold;
+            Console.WriteLine($"You leveled up to level {Level}");
+
+            experienceThreshold = Convert.ToInt32(Math.Floor(5 * Math.Pow(Level, 2) + (50 * Level) + 100 - currentExperience));
+        }
     }
 }

@@ -38,6 +38,10 @@ public static class Battle
                     int gold_earned = rand.Next(currentMonster.gold_dropped_min, currentMonster.gold_dropped_max);
                     player1.Gold += gold_earned;
                     Console.WriteLine($"You defeated the {currentMonster.Name}");
+                    Console.WriteLine();
+                    player1.gainEXP();
+                    player1.checkLevelUp();
+                    Console.WriteLine();
                     Console.WriteLine($"You obtained: {gold_earned} gold");
 
                     // check if player has a quest to kill the monsters here
