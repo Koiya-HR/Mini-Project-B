@@ -42,7 +42,7 @@ public static class Battle
                     player1.gainEXP();
                     player1.checkLevelUp();
                     Console.WriteLine();
-                    Console.WriteLine($"You obtained: {gold_earned} gold");
+                    Console.WriteLine($"You obtained: {gold_earned} gold\n");
 
                     // check if player has a quest to kill the monsters here
                     foreach (Quest quest in World.Quests)

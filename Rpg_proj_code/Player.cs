@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.Tracing;
+using System.Runtime.InteropServices;
 
 namespace Rpg_proj;
 
@@ -6,8 +7,8 @@ namespace Rpg_proj;
 public class Player
 {
     public int CurrentHitPoints;
-    public int currentExperience = 98;
-    public int Level = 0;
+    public int currentExperience = 100;
+    public int Level = 1;
     public Location CurrentLocation;
     public Weapon CurrentWeapon;
     public int MaximumHitPoints;
@@ -15,7 +16,7 @@ public class Player
     public int MonstersKilled = 0;
     public int QuestsCompleted = 0;
     public int Gold = 10;
-    public int experienceThreshold = 100;
+    public int experienceThreshold = 155;
 
     public List<Item> Inventory
     {
@@ -97,7 +98,7 @@ public class Player
 
     public void gainEXP()
     {
-        int expToGain = World.RandomGenerator.Next(1, 10);
+        int expToGain = World.RandomGenerator.Next(15, 25);
         currentExperience += expToGain;
 
         Console.WriteLine($"You've gained {expToGain} experience!");
@@ -111,7 +112,16 @@ public class Player
             currentExperience -= experienceThreshold;
             Console.WriteLine($"You leveled up to level {Level}");
 
-            experienceThreshold = Convert.ToInt32(Math.Floor(5 * Math.Pow(Level, 2) + (50 * Level) + 100 - currentExperience));
+            experienceThreshold = Convert.ToInt32(5 * Math.Pow(Level, 2) + (50 * Level) + 100 - currentExperience);
+            LevelUpStats();
+            Console.WriteLine($"New max health: [{CurrentHitPoints}/{MaximumHitPoints}]");
         }
+    }
+
+    public void LevelUpStats()
+    {
+            MaximumHitPoints += Convert.ToInt32(MaximumHitPoints/10);
+            CurrentHitPoints = MaximumHitPoints;
+            Gold += 50;
     }
 }

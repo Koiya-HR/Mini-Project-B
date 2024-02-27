@@ -28,8 +28,10 @@ public class Program
             {
                 case "1":
                     {
-                        Console.WriteLine($"current location: {player1.CurrentLocation.Name}\ncurrent weapon: {player1.CurrentWeapon.Name}\ncurrent hp: {player1.CurrentHitPoints}\nmonsters killed: {player1.MonstersKilled}\nquests completed: {player1.QuestsCompleted}"
-                        + $"\ncurrent gold {player1.Gold}");
+                        Console.WriteLine($"current location: {player1.CurrentLocation.Name}\ncurrent weapon: {player1.CurrentWeapon.Name}\n\n"
+                        + $"current hp: {player1.CurrentHitPoints}\nmonsters killed: {player1.MonstersKilled}\n\n"
+                        + $"current level: {player1.Level}\nexperience: [{player1.currentExperience}/{player1.experienceThreshold}]\n\n"
+                        + $"quests completed: {player1.QuestsCompleted}\ncurrent gold: {player1.Gold}");
                         break;
                     }
                 case "2":
