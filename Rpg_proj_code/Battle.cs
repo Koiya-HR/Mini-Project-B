@@ -35,7 +35,7 @@ public static class Battle
                 {
                     player1.MonstersKilled += 1;
                     Random rand = new();
-                    int gold_earned = rand.Next(1, 5);
+                    int gold_earned = rand.Next(currentMonster.gold_dropped_min, currentMonster.gold_dropped_max);
                     player1.Gold += gold_earned;
                     Console.WriteLine($"You defeated the {currentMonster.Name}");
                     Console.WriteLine($"You obtained: {gold_earned} gold");
