@@ -5,12 +5,12 @@ public static class Shop
     public static void shop(Player player1)
     {
 
-        Console.WriteLine("Welcome to the shop traveller, what would you like to purchase?");
+        Console.WriteLine($"Welcome to the shop traveller, what would you like to purchase? Currnet gold {player1.Gold}");
         while (true)
         {
             Console.WriteLine("(0) exit shop");
-            Console.WriteLine($"(1) Club (Weapon, max damage: {World.WeaponByID(2).MaximumDamage}): 200 gold");
-            Console.WriteLine($"(2) big hp pot (Item, heals 10 hp): 100 gold");
+            Console.WriteLine($"(1) Club (Weapon, max damage: {World.WeaponByID(2)!.MaximumDamage}): 25 gold");
+            Console.WriteLine($"(2) big hp pot (Item, heals 10 hp): 10 gold");
             string choice = Console.ReadLine() ?? "invalid";
             switch (choice)
             {
@@ -18,16 +18,18 @@ public static class Shop
                     Console.WriteLine("exiting shop...");
                     return;
 
-                case "1" when player1.Gold >= 200:
-                    player1.Gold -= 200;
-                    player1.CurrentWeapon = World.WeaponByID(2);
-                    Console.WriteLine($"You bought {World.WeaponByID(2)} for 200 gold.");
+                case "1" when player1.Gold >= 25:
+                    player1.Gold -= 25;
+                    Weapon prev_weapon = player1.CurrentWeapon!;
+                    player1.CurrentWeapon = World.WeaponByID(2)!;
+                    Console.WriteLine($"You bought {World.WeaponByID(2)!.Name} for 25 gold.");
+                    Console.WriteLine($"Weapon damge {prev_weapon.MaximumDamage} -> {player1.CurrentWeapon.MaximumDamage}");
                     break;
 
-                case "2" when player1.Gold >= 100:
-                    player1.Gold -= 100;
+                case "2" when player1.Gold >= 10:
+                    player1.Gold -= 10;
                     player1.AddItemToInventory(World.items[1]);
-                    Console.WriteLine($"You bought {World.items[1]} for 100 gold.");
+                    Console.WriteLine($"You bought {World.items[1].Name} for 10 gold.");
                     break;
 
                 default:

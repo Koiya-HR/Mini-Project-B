@@ -11,7 +11,7 @@ public class Player
     public int Level = 1;
     public int MonstersKilled = 0;
     public int QuestsCompleted = 0;
-    public int Gold = 0;
+    public int Gold = 10;
 
     public List<Item> Inventory
     {
@@ -76,6 +76,10 @@ public class Player
             {
                 if (CurrentLocation.QuestAvailableHere.started == false)
                 CurrentLocation.QuestAvailableHere.start_quest();
+            }
+            if (CurrentLocation == World.LocationByID(1))
+            {
+                Shop.shop(this);
             }
         }
     }
