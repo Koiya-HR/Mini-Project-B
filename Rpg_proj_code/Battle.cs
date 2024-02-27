@@ -23,6 +23,8 @@ public static class Battle
 
                 int damageToMonster = World.RandomGenerator.Next(player1.CurrentWeapon.MaximumDamage) + player1.Level;
                 currentMonster.CurrentHitPoints -= damageToMonster;
+                // if statement to make it so monster cant have negative hp
+                if (currentMonster.CurrentHitPoints < 0) {currentMonster.CurrentHitPoints = 0;}
                 Console.WriteLine($"You hit the {currentMonster.Name} for {damageToMonster} damage. Enemy HP: ({currentMonster.CurrentHitPoints}/{currentMonster.MaximumHitpoints})");
 
                 Console.WriteLine("press anything to continue");
