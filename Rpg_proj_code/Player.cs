@@ -80,11 +80,7 @@ public class Player
             if (CurrentLocation.QuestAvailableHere != null)
             {
                 if (CurrentLocation.QuestAvailableHere.started == false)
-                CurrentLocation.QuestAvailableHere.start_quest();
-            }
-            if (CurrentLocation == World.LocationByID(1))
-            {
-                Shop.shop(this);
+                    CurrentLocation.QuestAvailableHere.start_quest();
             }
         }
     }
@@ -109,7 +105,8 @@ public class Player
 
     public void checkLevelUp()
     {
-        if (currentExperience >= experienceThreshold) {
+        if (currentExperience >= experienceThreshold)
+        {
             Level += 1;
             currentExperience -= experienceThreshold;
             Console.WriteLine($"You leveled up to level {Level}");
