@@ -66,7 +66,11 @@ public static class Battle
 
                 int damageToPlayer = World.RandomGenerator.Next(currentMonster.MaximumDamage);
                 player1.CurrentHitPoints -= damageToPlayer;
-                Console.WriteLine($"The {currentMonster.Name} hits you for {damageToPlayer} damage. Your HP: ({player1.CurrentHitPoints}/{player1.MaximumHitPoints})");
+                // if you get hit for zero you dodge
+                if (damageToPlayer == 0)
+                { Console.WriteLine($"The {currentMonster.Name} attacks you but you dodge the attack"); }
+                else
+                { Console.WriteLine($"The {currentMonster.Name} hits you for {damageToPlayer} damage. Your HP: ({player1.CurrentHitPoints}/{player1.MaximumHitPoints})"); }
                 if (player1.CurrentHitPoints <= 0)
                 {
                     Console.WriteLine($"You were defeated by the {currentMonster}");
