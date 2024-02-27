@@ -6,6 +6,5 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Shop.cs.fs" />
   </ItemGroup>
 </Project>

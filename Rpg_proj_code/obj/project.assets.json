@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Yassi\\.nuget\\packages\\": {}
+    "/home/koiya/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Yassi\\Desktop\\Mini-Project-B\\Rpg_proj_code\\Rpg_proj.csproj",
+      "projectUniqueName": "/home/koiya/Mini-Project-B/Rpg_proj_code/Rpg_proj.csproj",
       "projectName": "Rpg_proj",
-      "projectPath": "c:\\Users\\Yassi\\Desktop\\Mini-Project-B\\Rpg_proj_code\\Rpg_proj.csproj",
-      "packagesPath": "C:\\Users\\Yassi\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Yassi\\Desktop\\Mini-Project-B\\Rpg_proj_code\\obj\\",
+      "projectPath": "/home/koiya/Mini-Project-B/Rpg_proj_code/Rpg_proj.csproj",
+      "packagesPath": "/home/koiya/.nuget/packages/",
+      "outputPath": "/home/koiya/Mini-Project-B/Rpg_proj_code/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Yassi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/koiya/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -19,8 +19,10 @@ public class Program
             {
                 case "1":
                     {
-                        Console.WriteLine($"current location: {player1.CurrentLocation.Name}\ncurrent weapon: {player1.CurrentWeapon.Name}\ncurrent hp: {player1.CurrentHitPoints}\nmonsters killed: {player1.MonstersKilled}\nquests completed: {player1.QuestsCompleted}"
-                        +$"\ncurrent gold {player1.Gold}");
+                        Console.WriteLine($"current location: {player1.CurrentLocation.Name}\ncurrent weapon: {player1.CurrentWeapon.Name}"
+                        +$"\ncurrent hp: {player1.CurrentHitPoints}\ncurrent level: {player1.Level}"
+                        +$"\nExp till level up: [{player1.currentExperience}/{player1.experienceThreshold}]\nmonsters killed: {player1.MonstersKilled}"
+                        +$"\nquests completed: {player1.QuestsCompleted}\ncurrent gold {player1.Gold}");
                         break;
                     }
                 case "2":
@@ -45,6 +47,7 @@ public class Program
                         break;
                     }
             };
+            
             if (player1.winGame())
             {
                 stillPlaying = false;
