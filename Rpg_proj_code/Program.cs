@@ -15,12 +15,21 @@ public class Program
         while (stillPlaying)
         {
             Console.WriteLine("What would you like to do (enter a number)?\n1: see game stats\n2: Move\n3: Fight\n4: Quit");
-            switch (Console.ReadLine())
+            if (player1.CurrentLocation == World.LocationByID(1))
+            {
+                Console.WriteLine("5: visit the Town Square shop");
+            }
+            string choice = Console.ReadLine() ?? "invalid";
+            if (choice == "5" && player1.CurrentLocation == World.LocationByID(1))
+            {
+                Shop.shop(player1);
+            }
+            switch (choice)
             {
                 case "1":
                     {
                         Console.WriteLine($"current location: {player1.CurrentLocation.Name}\ncurrent weapon: {player1.CurrentWeapon.Name}\ncurrent hp: {player1.CurrentHitPoints}\nmonsters killed: {player1.MonstersKilled}\nquests completed: {player1.QuestsCompleted}"
-                        +$"\ncurrent gold {player1.Gold}");
+                        + $"\ncurrent gold {player1.Gold}");
                         break;
                     }
                 case "2":
@@ -47,6 +56,7 @@ public class Program
             };
             if (player1.winGame())
             {
+                Console.WriteLine("you completed the adventure and saved the Town!");
                 stillPlaying = false;
             }
         }
