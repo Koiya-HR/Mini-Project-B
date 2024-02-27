@@ -46,7 +46,7 @@ public static class Battle
                             }
                             else
                             {
-                                Console.WriteLine($"You need to kill {quest.monstes_left} more monster{(quest.monstes_left > 1 ? "s" : "")} to finish the quest");
+                                Console.WriteLine($"You need to kill {quest.monstes_left} more monster{(quest.monstes_left > 1 ? "s" : "")} to finish the {quest.Name}");
                                 Console.WriteLine("press anything to continue");
                                 Console.ReadLine();
                             }
