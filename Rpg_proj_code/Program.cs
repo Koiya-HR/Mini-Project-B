@@ -1,7 +1,10 @@
-﻿namespace Rpg_proj;
+﻿using System.Runtime.InteropServices.Marshalling;
+
+namespace Rpg_proj;
 
 public class Program
 {
+    static bool stillPlaying = true;
     static void Main()
     {
         Console.WriteLine("Welcome adventurer, what is your name?\n");
@@ -9,14 +12,14 @@ public class Program
 
         Player player1 = new(100, World.Locations[0], World.Weapons[0], 100, PlayerName);
 
-        while (true)
+        while (stillPlaying)
         {
             Console.WriteLine("What would you like to do (enter a number)?\n1: see game stats\n2: Move\n3: Fight\n4: Quit");
             switch (Console.ReadLine())
             {
                 case "1":
                     {
-                        Console.WriteLine($"current location: {player1.CurrentLocation.Name}\ncurrent weapon: {player1.CurrentWeapon.Name}\nmonsters killed: {player1.MonstersKilled}\nquests completed: {player1.QuestsCompleted}"
+                        Console.WriteLine($"current location: {player1.CurrentLocation.Name}\ncurrent weapon: {player1.CurrentWeapon.Name}\ncurrent hp: {player1.CurrentHitPoints}\nmonsters killed: {player1.MonstersKilled}\nquests completed: {player1.QuestsCompleted}"
                         +$"\ncurrent gold {player1.Gold}");
                         break;
                     }
@@ -42,6 +45,10 @@ public class Program
                         break;
                     }
             };
+            if (player1.winGame())
+            {
+                stillPlaying = false;
+            }
         }
     }
 }

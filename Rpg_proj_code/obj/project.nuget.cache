@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FeFWKF4gLcDnnuspW/kKm2FqLeIlAmtwLahkGgo8fJJifNJKB4aUSKH5EurCAgGogOCl31FKJNA5cYUgkaO7nA==",
+  "dgSpecHash": "Xv7VLqb2i1dBTaBqcifQXVeo0t2DQYtCMIyNF1Lv6OSQ8cHwqaXcEZr3jk7Ilr0ZNCe1j3cvgccvALzDKGjh5w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ivan\\Documents\\C_sharp_programms\\Rpg_proj\\Proj_B\\Mini-Project-B\\Rpg_proj_code\\Rpg_proj.csproj",
+  "projectFilePath": "/home/koiya/Mini-Project-B/Rpg_proj_code/Rpg_proj.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

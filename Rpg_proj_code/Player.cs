@@ -79,4 +79,14 @@ public class Player
             }
         }
     }
+
+    public bool winGame()
+    {
+        if (QuestsCompleted == World.Quests.Count())
+        {
+            Console.WriteLine("You've completed all the quests and saved the village.\nGood job adventurer!");
+            return true;
+        }
+        return false;
+    }
 }
