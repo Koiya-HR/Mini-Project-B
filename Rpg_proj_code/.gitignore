@@ -1,5 +1,2 @@
-obj/**
-bin/**
-**/*.cache
-**/*.exe
-**/*.dll
+**/obj/*/
+**/bin/*/
