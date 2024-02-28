@@ -44,8 +44,7 @@ public class Quest
 
         player.QuestsCompleted += 1;
 
-
-        // add reward to players inventory
+        player.AddItemToInventory(Reward);
 
         if (player.QuestsCompleted == 2)
         {
