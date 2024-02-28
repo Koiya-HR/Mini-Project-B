@@ -16,7 +16,7 @@ public class Player
     public int MonstersKilled = 0;
     public int QuestsCompleted = 0;
     public int Gold = 10;
-    public int experienceThreshold = 155;
+    public int experienceThreshold = 50;
 
     public List<Item> Inventory
     {
@@ -115,6 +115,8 @@ public class Player
             experienceThreshold = Convert.ToInt32(5 * Math.Pow(Level, 2) + (50 * Level) + 100 - currentExperience);
             LevelUpStats();
             Console.WriteLine($"New max health: [{CurrentHitPoints}/{MaximumHitPoints}]");
+            Console.WriteLine("press enter to continue");
+            Console.ReadLine();
         }
     }
 

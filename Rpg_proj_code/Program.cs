@@ -10,7 +10,7 @@ public class Program
         Console.WriteLine("Welcome adventurer, what is your name?\n");
         string PlayerName = Console.ReadLine() ?? "Hero";
 
-        Player player1 = new(100, World.Locations[0], World.Weapons[0], 100, PlayerName);
+        Player player1 = new(75, World.Locations[0], World.Weapons[0], 75, PlayerName);
 
         while (stillPlaying)
         {
