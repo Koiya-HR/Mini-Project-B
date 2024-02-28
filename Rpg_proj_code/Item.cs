@@ -24,6 +24,5 @@ public class Item
         Name = name;
         Restores_amount = restores_amount;
         Description = description;
-
     }
 }

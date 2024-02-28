@@ -40,7 +40,7 @@ public static void move(Player player1)
                 {
                     Console.WriteLine($"The guard at the bridge stops you and says:\nComplete 2 quests to pass this brige");
                     Console.WriteLine($"Current progress: {player1.QuestsCompleted}/2");
-                    Console.WriteLine("press anything to continue");
+                    Console.WriteLine("Press anything to continue...");
                     Console.ReadLine();
                     break;
 

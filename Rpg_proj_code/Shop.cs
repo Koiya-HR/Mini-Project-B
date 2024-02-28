@@ -8,14 +8,14 @@ public static class Shop
         Console.WriteLine($"Welcome to the shop traveller, what would you like to purchase? Current gold {player1.Gold}");
         while (true)
         {
-            Console.WriteLine("(0) exit shop");
+            Console.WriteLine("(0) Exit shop");
             Console.WriteLine($"(1) Club (Weapon, max damage: {World.WeaponByID(2)!.MaximumDamage}): 25 gold");
             Console.WriteLine($"(2) big hp pot (Item, heals 10 hp): 10 gold");
             string choice = Console.ReadLine() ?? "invalid";
             switch (choice)
             {
                 case "0":
-                    Console.WriteLine("exiting shop...");
+                    Console.WriteLine("Exiting shop...");
                     return;
 
                 case "1" when player1.Gold >= 25:

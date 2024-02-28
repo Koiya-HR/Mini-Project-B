@@ -7,18 +7,18 @@ public static class Battle
         Monster currentMonster = player1.CurrentLocation.MonsterLivingHere;
         if (currentMonster == null)
         {
-            Console.WriteLine("\nthere are no monsters living here");
-            Console.WriteLine("PRESS ENTER TO CONTINUE");
+            Console.WriteLine("\nThere are no monsters living here");
+            Console.WriteLine("Press enter to continue...");
             Console.ReadLine();
         }
         else
         {
-            Console.WriteLine($"you enter a fight with a {currentMonster.Name}!");
+            Console.WriteLine($"You enter a fight with a {currentMonster.Name}!");
             // restore the monster hp to full at the start of fight
             currentMonster.CurrentHitPoints = currentMonster.MaximumHitpoints;
             while (true)
             {
-                Console.WriteLine("press enter to continue");
+                Console.WriteLine("Press enter to continue...");
                 Console.ReadLine();
 
                 int damageToMonster = World.RandomGenerator.Next(player1.CurrentWeapon.MaximumDamage) + player1.Level;
@@ -27,7 +27,7 @@ public static class Battle
                 if (currentMonster.CurrentHitPoints < 0) { currentMonster.CurrentHitPoints = 0; }
                 Console.WriteLine($"You hit the {currentMonster.Name} for {damageToMonster} damage. Enemy HP: ({currentMonster.CurrentHitPoints}/{currentMonster.MaximumHitpoints})");
 
-                Console.WriteLine("press enter to continue");
+                Console.WriteLine("Press enter to continue...");
                 Console.ReadLine();
 
                 if (currentMonster.CurrentHitPoints <= 0)
@@ -58,13 +58,12 @@ public static class Battle
                             else
                             {
                                 Console.WriteLine($"You need to kill {quest.monstes_left} more monster{(quest.monstes_left > 1 ? "s" : "")} to finish the {quest.Name}");
-                                Console.WriteLine("press enter to continue");
+                                Console.WriteLine("Press enter to continue...");
                                 Console.ReadLine();
                             }
-
                         }
-
                     }
+
                     break;
                 }
 
@@ -78,7 +77,7 @@ public static class Battle
                 if (player1.CurrentHitPoints <= 0)
                 {
                     Console.WriteLine($"You were defeated by the {currentMonster}");
-                    Console.WriteLine("you respawn at home");
+                    Console.WriteLine("You respawn at home...");
                     player1.CurrentHitPoints = player1.MaximumHitPoints;
                     player1.CurrentLocation = World.Locations[0];
                     break;

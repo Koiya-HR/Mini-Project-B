@@ -115,7 +115,7 @@ public class Player
             experienceThreshold = Convert.ToInt32(5 * Math.Pow(Level, 2) + (50 * Level) + 100 - currentExperience);
             LevelUpStats();
             Console.WriteLine($"New max health: [{CurrentHitPoints}/{MaximumHitPoints}]");
-            Console.WriteLine("press enter to continue");
+            Console.WriteLine("Press enter to continue...");
             Console.ReadLine();
         }
     }

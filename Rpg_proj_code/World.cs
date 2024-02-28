@@ -70,7 +70,7 @@ public static class World
             new Quest(
                 QUEST_ID_CLEAR_ALCHEMIST_GARDEN,
                 "Clear the alchemist's garden",
-                "Kill rats in the alchemist's garden ",
+                "Kill rats in the alchemist's garden",
                 items[0],
                 Locations[LOCATION_ID_ALCHEMISTS_GARDEN]);
 
@@ -229,9 +229,9 @@ public static class World
         // ID | NAME | restores_amount | desctription
 
         // small hp pot
-        Item small_hp_pot = new(0, "small health potion", 5, "A small potion that restores 5 HP");
+        Item small_hp_pot = new(0, "Small health potion", 5, "A small potion that restores 5 HP");
         // large hp pot
-        Item large_hp_pot = new(1, "large health potion", 10, "A large potion that restores 10 HP");
+        Item large_hp_pot = new(1, "Large health potion", 10, "A large potion that restores 10 HP");
 
         items.Add(small_hp_pot);
         items.Add(large_hp_pot);

@@ -39,7 +39,7 @@ public class Quest
         finished = true;
         Console.WriteLine($"{Name}: Completed!");
         Console.WriteLine($"Obtained a {Reward.Name}");
-        Console.WriteLine("press anything to continue");
+        Console.WriteLine("Press anything to continue...");
         Console.ReadLine();
 
         player.QuestsCompleted += 1;
@@ -49,8 +49,8 @@ public class Quest
 
         if (player.QuestsCompleted == 2)
         {
-            Console.WriteLine("You have completed 2 Quests, you can now cross the bridge to the east");
-            Console.WriteLine("press anything to continue");
+            Console.WriteLine("You have completed 2 Quests, you can now cross the bridge to the east!");
+            Console.WriteLine("Press anything to continue...");
             Console.ReadLine();
 
         }

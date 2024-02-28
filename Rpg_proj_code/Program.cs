@@ -17,21 +17,24 @@ public class Program
             Console.WriteLine("What would you like to do (enter a number)?\n1: see game stats\n2: Move\n3: Fight\n4: Quit");
             if (player1.CurrentLocation == World.LocationByID(1))
             {
-                Console.WriteLine("5: visit the Town Square shop");
+                Console.WriteLine("5: Visit the Town Square shop");
             }
-            string choice = Console.ReadLine() ?? "invalid";
+
+            string choice = Console.ReadLine() ?? "Invalid";
+
             if (choice == "5" && player1.CurrentLocation == World.LocationByID(1))
             {
                 Shop.shop(player1);
             }
+
             switch (choice)
             {
                 case "1":
                     {
-                        Console.WriteLine($"current location: {player1.CurrentLocation.Name}\ncurrent weapon: {player1.CurrentWeapon.Name}\n\n"
-                        + $"current hp: {player1.CurrentHitPoints}\nmonsters killed: {player1.MonstersKilled}\n\n"
-                        + $"current level: {player1.Level}\nexperience: [{player1.currentExperience}/{player1.experienceThreshold}]\n\n"
-                        + $"quests completed: {player1.QuestsCompleted}\ncurrent gold: {player1.Gold}");
+                        Console.WriteLine($"Current location: {player1.CurrentLocation.Name}\nCurrent weapon: {player1.CurrentWeapon.Name}\n\n"
+                        + $"Current HP: {player1.CurrentHitPoints}\nMonsters killed: {player1.MonstersKilled}\n\n"
+                        + $"Current level: {player1.Level}\nExperience: [{player1.currentExperience}/{player1.experienceThreshold}]\n\n"
+                        + $"Quests completed: {player1.QuestsCompleted}\nCurrent gold: {player1.Gold}");
 
                         Console.WriteLine("\nPress enter to continue");
                         Console.ReadLine();
@@ -55,13 +58,14 @@ public class Program
                     }
                 default:
                     {
-                        Console.WriteLine("invalid command");
+                        Console.WriteLine("Invalid command");
                         break;
                     }
             };
+
             if (player1.winGame())
             {
-                Console.WriteLine("you completed the adventure and saved the Town!");
+                Console.WriteLine("You completed the adventure and saved the Town!");
                 stillPlaying = false;
             }
         }
