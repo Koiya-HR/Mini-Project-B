@@ -14,7 +14,8 @@ public class Program
 
         while (stillPlaying)
         {
-            Console.WriteLine("What would you like to do (enter a number)?\n1: see game stats\n2: Move\n3: Fight\n4: Quit");
+            Console.WriteLine("What would you like to do (enter a number)?\n1: See game stats\n2: Move\n3: Fight\n4: Inventory\n5: Quit");
+
             if (player1.CurrentLocation == World.LocationByID(1))
             {
                 Console.WriteLine("5: Visit the Town Square shop");
@@ -51,6 +52,12 @@ public class Program
                         break;
                     }
                 case "4":
+                    {
+                        Console.WriteLine("Viewing inventory...");
+                        player1.ViewInventory();
+                        break;
+                    }
+                case "5":
                     {
                         Console.WriteLine("Quitting game...");
                         Environment.Exit(0);

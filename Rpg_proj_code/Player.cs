@@ -35,6 +35,24 @@ public class Player
 
     }
 
+    public void ViewInventory()
+    {
+        if (Inventory.Count == 0)
+        {
+            Console.WriteLine("Your inventory is empty!");
+        }
+        else
+        {
+            Console.WriteLine("Inventory items:");
+            foreach (Item item in Inventory)
+            {
+                Console.WriteLine($"{item.Name} - {item.Description}");
+            }
+        }
+        Console.WriteLine("\nPress enter to continue...");
+        Console.ReadLine();
+    }
+
     public void AddItemToInventory(Item item)
     {
         Inventory.Add(item);
