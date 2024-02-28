@@ -1,7 +1,5 @@
-obj/*
-bin/*
-obj/Debug/*
-bin/*
-*/*.cache
-*/*.exe
-*/*.dll
+obj/**
+bin/**
+**/*.cache
+**/*.exe
+**/*.dll
