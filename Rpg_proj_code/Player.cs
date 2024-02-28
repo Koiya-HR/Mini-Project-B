@@ -7,7 +7,7 @@ namespace Rpg_proj;
 public class Player
 {
     public int CurrentHitPoints;
-    public int currentExperience = 100;
+    public int currentExperience = 0;
     public int Level = 1;
     public Location CurrentLocation;
     public Weapon CurrentWeapon;

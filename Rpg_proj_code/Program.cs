@@ -32,6 +32,9 @@ public class Program
                         + $"current hp: {player1.CurrentHitPoints}\nmonsters killed: {player1.MonstersKilled}\n\n"
                         + $"current level: {player1.Level}\nexperience: [{player1.currentExperience}/{player1.experienceThreshold}]\n\n"
                         + $"quests completed: {player1.QuestsCompleted}\ncurrent gold: {player1.Gold}");
+
+                        Console.WriteLine("\nPress enter to continue");
+                        Console.ReadLine();
                         break;
                     }
                 case "2":

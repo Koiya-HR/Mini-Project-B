@@ -18,7 +18,7 @@ public static class Battle
             currentMonster.CurrentHitPoints = currentMonster.MaximumHitpoints;
             while (true)
             {
-                Console.WriteLine("press anything to continue");
+                Console.WriteLine("press enter to continue");
                 Console.ReadLine();
 
                 int damageToMonster = World.RandomGenerator.Next(player1.CurrentWeapon.MaximumDamage) + player1.Level;
@@ -27,7 +27,7 @@ public static class Battle
                 if (currentMonster.CurrentHitPoints < 0) { currentMonster.CurrentHitPoints = 0; }
                 Console.WriteLine($"You hit the {currentMonster.Name} for {damageToMonster} damage. Enemy HP: ({currentMonster.CurrentHitPoints}/{currentMonster.MaximumHitpoints})");
 
-                Console.WriteLine("press anything to continue");
+                Console.WriteLine("press enter to continue");
                 Console.ReadLine();
 
                 if (currentMonster.CurrentHitPoints <= 0)
@@ -58,7 +58,7 @@ public static class Battle
                             else
                             {
                                 Console.WriteLine($"You need to kill {quest.monstes_left} more monster{(quest.monstes_left > 1 ? "s" : "")} to finish the {quest.Name}");
-                                Console.WriteLine("press anything to continue");
+                                Console.WriteLine("press enter to continue");
                                 Console.ReadLine();
                             }
 
