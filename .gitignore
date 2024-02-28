@@ -8,3 +8,14 @@
 *.exe
 *.pdb
 *.cache
+Rpg_proj_code/obj/Rpg_proj.csproj.nuget.g.props
+Rpg_proj_code/obj/Rpg_proj.csproj.nuget.dgspec.json
+Rpg_proj_code/obj/project.nuget.cache
+Rpg_proj_code/obj/project.assets.json
+Rpg_proj_code/obj/Debug/net8.0/Rpg_proj.GeneratedMSBuildEditorConfig.editorconfig
+Rpg_proj_code/obj/Debug/net8.0/Rpg_proj.assets.cache
+Rpg_proj_code/obj/Debug/net8.0/Rpg_proj.AssemblyInfoInputs.cache
+Rpg_proj_code/obj/Debug/net8.0/Rpg_proj.AssemblyInfo.cs
+Rpg_proj_code/bin/Debug/net8.0/Rpg_proj.pdb
+Rpg_proj_code/bin/Debug/net8.0/Rpg_proj.exe
+Rpg_proj_code/bin/Debug/net8.0/Rpg_proj.dll
